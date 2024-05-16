@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif Arial, Helvetica,;
+}
+
+body{
+    background-image: url(forest.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+
+#open-btn{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    padding: 3px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    border: solid 2px white;
+    border-radius: 10px;
+    box-shadow: 0 0 3px black;
+    
+}
+#open-btn :active{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+#modal-container{
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    background-color: white;
+    font-size: 1.5rem;
+    border: solid 2px white;
+    border-radius: 15px;
+    z-index: 1;
+    animation-name: modalAnimation;
+    animation-duration: 5s;
+    background-color: rgba(0, 0, 0, .2);
+    color: white;
+    
+}
+
+
+#close-btn{
+    color: red;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+}
+@keyframes modalAnimation {
+    from {
+       top: -100px;
+       opacity: 0;
+    }
+
+    to {
+       top: 50%;
+       opacity: 1; 
+    }
+}
